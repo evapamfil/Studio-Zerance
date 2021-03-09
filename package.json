@@ -1,0 +1,52 @@
+{
+  "name": "gulp-webpack-starter",
+  "version": "1.0.3",
+  "description": "Gulp - webpack starter is a starter kit which provides a simple way of setting up a modern web development environment which require some of the most popular gulp plugins for compiling SCSS and JS files",
+  "main": "dest/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SASS",
+    "ES6",
+    "Gulp",
+    "Webpack",
+    "starter",
+    "compiling",
+    "web",
+    "front-end",
+    "gulp-starter",
+    "babel",
+    "browsersync",
+    "imagemin"
+  ],
+  "author": "Blaž Sternad",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sternadb/gulp-webpack-starter.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "gulp": "^4.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "gender-api.com-client": "^1.0.14",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "i": "^0.3.6",
+    "webpack-stream": "^5.2.1"
+  }
+}

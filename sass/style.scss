@@ -1,0 +1,401 @@
+@import '**/*.scss'
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla-Regular.eot');
+    src: url('../fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Karla-Regular.woff2') format('woff2'),
+        url('../fonts/Karla-Regular.woff') format('woff'),
+        url('../fonts/Karla-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Futura Maxi CG';
+    src: url('../fonts/FuturaMaxiCGBold.eot');
+    src: url('../fonts/FuturaMaxiCGBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaMaxiCGBold.woff2') format('woff2'),
+        url('../fonts/FuturaMaxiCGBold.woff') format('woff'),
+        url('../fonts/FuturaMaxiCGBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+
+body {
+	position: relative;
+	font-size: 16px;
+
+	@media all and (max-width: 800px){
+		font-size: 14px;
+	}
+
+	@media all and (max-width: 500px){
+		font-size: 12px;
+	}
+}
+
+.container{
+	max-width: 1790px;
+	width: 100%;
+	padding: 0 30px;
+}
+.banner{
+	min-height: 100vh;
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	padding: 50px 20px;
+	.logo{
+		position: absolute;
+		top: 10px;
+		max-width: 30%;
+		z-index: 3;
+	}
+	nav{
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+	ul{
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		list-style: none;
+		li{
+			font-family: 'Futura Maxi CG';
+			color: $black;
+			text-decoration: none;
+			display: inline-block;
+			margin-left: 60px;
+		}
+	}
+	@media all and ( max-width: 900px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		transform: translateX(100%);
+		width: 100%;
+		right: 100%;
+		background-color: $white;
+		height: 100%;
+		z-index: 2;
+		transition: all 0.5s ease;
+
+		ul{
+			margin-left: auto;
+			display: inline-block;
+			width: auto;
+			margin-right: 50px;
+			margin-top: 100px;
+
+			li{
+				display: block;
+				margin: 40px 0;
+			}
+		}
+
+	
+
+		&.open{
+			transform: translateX(0);
+			transition: all 0.5s ease;
+		}
+	}
+}
+.burger{
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 50px;
+	z-index: 2;
+	cursor: pointer;
+
+	div{
+		height: 3px;
+		width: 30px;
+		background-color: $black;
+		margin: 7px 0;
+
+	}
+
+	@media all and (max-width: 900px){
+		display: block;
+	}
+
+	&.open{
+		div{
+			&:nth-child(1){
+				transform: rotate(45deg);
+				margin-bottom: -20px;
+				transition: all 0.2s ease;
+			}
+			&:nth-child(2){
+				opacity: 0;
+			}
+			&:nth-child(3){
+				transform: rotate(-45deg);
+				transition: all 0.2s ease;
+			}
+		}
+	}
+}
+}
+.center{
+	margin: auto;
+	text-align: center;
+	padding: 30px;
+	padding-top: 0;
+    padding-bottom: 100px;
+	p{
+		font-family: 'Karla';
+		text-transform: uppercase;
+		font-size: 1.25em;
+		margin-bottom: 40px;
+	}
+	h1{
+		font-family: 'Futura Maxi CG';
+		font-weight: bold;
+		font-size:3.75em;
+		z-index: 1;
+	}
+	.overline{
+		position: relative;
+		z-index: 1;
+		img{
+			position: absolute;
+			bottom: -10px;
+			max-width: 300px;
+			left: 50%;
+			z-index: -1;
+			transform: translateX(-50%);
+			
+		}
+	}
+	span{
+		position: relative;
+		z-index: 1;
+	}
+
+}
+.portfolio{
+	background-color: $black;
+	h2{
+		padding-top: 150px;
+		text-transform: uppercase;
+		color: $white;
+		font-family: 'Karla';
+		font-size: 1.25em;
+		text-align: center;
+		font-weight: normal;
+	}
+	div{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 80px;
+		a{
+			margin: 15px 20px;
+			img{
+				max-width: 200px;
+			}
+		}
+
+		@media all and (max-width: 600px){
+			justify-content: center;
+			padding: 30px;
+			a img{
+				max-width: 100px;
+			}
+		}
+	}
+}
+
+.slider{
+	.swiper-slide{
+		min-height: 100vh;
+		padding: 30px 50px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		margin-right: 0 !important;
+
+		div{
+			background-color: $white;
+			max-width: 630px;
+			padding: 50px;
+			text-align: center;
+			font-family: 'Karla';
+		}
+		span{
+			font-family: 'Karla';
+			font-size: 1.25em;
+			margin-bottom: 20px;
+		}
+		img{
+			display: block;
+			margin: 20px auto;
+			max-width: 100%;
+			
+		}
+		a{
+			position: relative;
+			margin-top: 50px;
+			display: inline-block;
+			font-weight: bold;
+			font-family: 'Futura Maxi CG';
+			font-size: 1.25em;
+			z-index: 1;
+			img{
+				position: absolute;
+				width: 100px;
+				left: 50%;
+				bottom: -22px;
+				z-index: -1;
+				transform: translateX(-50%);
+			}
+			&:hover{
+				font-style: italic;
+			}
+		}
+
+	}
+	.first{
+		background-image: url('../img/Artboard_2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.second{
+		background-image: url('../img/Artboard_1.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.swiper-button-prev, .swiper-button-next{
+		color: $black;
+	}
+	.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+		display: none;
+	}
+}
+.footer{
+	background-color: #ffcd1a;
+	padding: 30px 10px;
+	overflow-x: hidden;
+	p{
+		font-family: 'Futura Maxi CG';
+		font-weight: bold;
+		font-size: 1.25em;
+		color: $white;
+		animation-duration: 120s;
+		animation: defile 25s infinite;
+		animation-timing-function: linear;
+		white-space: nowrap;
+	}
+}
+
+.contact{
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 150px;
+	transform: translateX(-50%);
+	z-index: 2;
+	background-color: $black;
+	color: $white;
+	font-family: 'Karla';
+	&.open{
+		display: block;
+	}
+	div{
+		position: relative;
+	}
+
+	img{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 20px;
+		cursor: pointer;
+	}
+	form{
+		padding: 50px;
+	}
+
+	input, button{
+		display: block;
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	input, textarea{
+		background: transparent;
+		color: #fff;
+		border: 3px solid #fff;
+		padding: 10px 20px;
+		&::placeholder{
+			color: $white;
+			font-family: 'Karla';
+		}
+	}
+
+	button{
+		background: $white;
+		color: $black;
+		padding: 10px 20px;
+		cursor: pointer;
+		
+	}
+}
+.response{
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 200px;
+	transform: translateX(-50%);
+	z-index: 2;
+	background-color: $black;
+	color: $white;
+	padding: 50px;
+	font-family: 'Futura Maxi CG';
+	font-size : 1.875em;
+	font-weight: bold;
+	text-align: center;
+
+	&.open{
+		display: block;
+	}
+
+	button{
+		background: $white;
+		color: $black;
+		padding: 10px 20px;
+		margin-top: 50px;
+		cursor: pointer;
+		font-family: 'Karla';
+	}
+
+
+}
+
+@keyframes defile {
+	0% {
+	  transform: translate(0, 0);
+	}
+	100% {
+	  transform: translate(-100%, 0);
+	}
+  }
